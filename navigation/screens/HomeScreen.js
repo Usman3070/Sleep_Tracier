@@ -1,5 +1,6 @@
 import * as React from "react";
 import { View, Text, ImageBackground } from "react-native";
+import CircularProgress from "../../components/CircularProgress";
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -9,12 +10,7 @@ export default function HomeScreen({ navigation }) {
       resizeMode="stretch"
     >
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text
-          onPress={() => alert('This is the "Home" screen.')}
-          style={{ fontSize: 26, fontWeight: "bold", color: "#fff" }}
-        >
-          Home Screen
-        </Text>
+        <CircularProgress />
       </View>
     </ImageBackground>
   );
