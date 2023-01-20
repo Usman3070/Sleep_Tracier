@@ -1,6 +1,7 @@
 import * as React from "react";
 import { View, Text, ImageBackground } from "react-native";
 import CircularProgress from "../../components/CircularProgress";
+import Days from "../../components/Days";
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -11,6 +12,7 @@ export default function HomeScreen({ navigation }) {
     >
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <CircularProgress />
+        <Days />
       </View>
     </ImageBackground>
   );
