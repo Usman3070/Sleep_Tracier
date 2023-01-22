@@ -1,19 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import ProgressCircle from "react-native-progress-circle";
+import Circularprogress from "react-native-circular-progress-indicator";
 const CircularProgress = () => {
-  return (
-    <ProgressCircle
-      percent={60}
-      radius={50}
-      borderWidth={8}
-      color="#3399FF"
-      shadowColor="#999"
-      bgColor="#fff"
-    >
-      <Text style={{ fontSize: 18 }}>{"60%"}</Text>
-    </ProgressCircle>
-  );
+  return <Circularprogress value={58} />;
 };
 
 export default CircularProgress;
