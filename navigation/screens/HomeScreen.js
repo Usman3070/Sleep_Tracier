@@ -1,21 +1,38 @@
 import * as React from "react";
 import { View, Text, ImageBackground } from "react-native";
-import CircularProgress from "../../components/CircularProgress";
+import Btn from "../../components/Btn";
 import Days from "../../components/Days";
 import FactorSound from "../../components/FactorSound";
+import TopNav from "../../components/TopNav";
 
 export default function HomeScreen({ navigation }) {
   return (
-    <ImageBackground
-      source={require("../../assets/images/background.png")}
-      style={{ height: "100%", width: "100%" }}
-      resizeMode="stretch"
-    >
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <CircularProgress />
-        <Days />
-        <FactorSound />
-      </View>
-    </ImageBackground>
+    <View>
+      <TopNav
+        leftIcon={require("../../assets/icons/TopNav.png")}
+        rightIcon={require("../../assets/icons/Notification.png")}
+        title='Hi, Usman'
+      />
+      <ImageBackground
+        source={require("../../assets/images/background.png")}
+        style={{ height: "100%", width: "100%" }}
+        resizeMode='stretch'
+      >
+        <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Days />
+          <FactorSound />
+          <Btn
+            source={require("../../assets/icons/Playstore.png")}
+            title='Start Sleep'
+          />
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
