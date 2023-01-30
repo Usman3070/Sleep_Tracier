@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, ScrollView } from "react-native";
 import StatisticsBtn from "../../components/StatisticsBtn";
 import StatisticsComp from "../../components/StatisticsComp";
 import TopNav from "../../components/TopNav";
@@ -13,14 +13,16 @@ export default function StatisticsScreen({ navigation }) {
         secondRightIcon={require("../../assets/icons/Search.png")}
         title='Stories'
       />
-      <ImageBackground
-        source={require("../../assets/images/background.png")}
-        style={{ height: "100%", width: "100%" }}
-        // resizeMode='stretch'
-      >
-        <StatisticsBtn />
-        <StatisticsComp />
-      </ImageBackground>
+      <ScrollView>
+        <ImageBackground
+          source={require("../../assets/images/background.png")}
+          style={{ height: "100%", width: "100%" }}
+          // resizeMode='stretch'
+        >
+          <StatisticsBtn />
+          <StatisticsComp />
+        </ImageBackground>
+      </ScrollView>
     </View>
   );
 }
