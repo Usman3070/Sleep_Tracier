@@ -27,13 +27,7 @@ const StartJourney = () => {
     <View>
       <FlatList
         data={data}
-        renderItem={({ item }) => (
-          <StartJourneyComp
-            image={item.image}
-            title={item.title}
-            subTitle={item.subTitle}
-          />
-        )}
+        renderItem={({ item }) => <StartJourneyComp item={item} />}
         keyExtractor={(item) => item.key}
         horizontal={true}
       />

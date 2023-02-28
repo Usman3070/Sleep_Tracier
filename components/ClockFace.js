@@ -51,8 +51,8 @@ const ClockFace = () => {
       const angle = (i * 6 - 90) * (Math.PI / 180);
       const x1 = 150 + 85 * Math.cos(angle);
       const y1 = 150 + 85 * Math.sin(angle);
-      const x2 = 150 + 100 * Math.cos(angle);
-      const y2 = 150 + 100 * Math.sin(angle);
+      const x2 = 150 + 90 * Math.cos(angle);
+      const y2 = 150 + 90 * Math.sin(angle);
       minuteDashes.push(
         <SVG.Line
           key={i}
@@ -74,8 +74,8 @@ const ClockFace = () => {
       const angle = (i * 30 - 90) * (Math.PI / 180);
       const x1 = 150 + 85 * Math.cos(angle);
       const y1 = 150 + 85 * Math.sin(angle);
-      const x2 = 150 + 100 * Math.cos(angle);
-      const y2 = 150 + 100 * Math.sin(angle);
+      const x2 = 150 + 90 * Math.cos(angle);
+      const y2 = 150 + 90 * Math.sin(angle);
       hourDashes.push(
         <SVG.Line
           key={i}
@@ -84,7 +84,7 @@ const ClockFace = () => {
           x2={x2}
           y2={y2}
           stroke="white"
-          strokeWidth={3}
+          strokeWidth={2}
         />
       );
     }
@@ -94,13 +94,16 @@ const ClockFace = () => {
   return (
     <View style={styles.container}>
       <SVG.Svg width={300} height={300}>
+        <SVG.Text cx={150} cy={150} textAnchor="middle" fontSize={20}>
+          Hello World
+        </SVG.Text>
+        <SVG.Circle cx={150} cy={150} r={75} fill="#291C43" />
         <SVG.Circle
           cx={150}
           cy={150}
           r={85}
-          stroke="black"
-          strokeWidth={2}
-          fill="#291C43"
+          stroke="#211833"
+          strokeWidth={20}
         />
 
         <SVG.G
@@ -116,7 +119,17 @@ const ClockFace = () => {
             style={styles.progressCircle}
             cx={150}
             cy={150}
-            r={110}
+            r={108}
+            stroke="#271837"
+            strokeWidth={30}
+            fill="none"
+          />
+
+          <SVG.Circle
+            style={styles.progressCircle}
+            cx={150}
+            cy={150}
+            r={108}
             stroke="#A355EE"
             strokeWidth={25}
             fill="none"
@@ -140,7 +153,7 @@ const styles = {
   },
   number: {
     position: "absolute",
-    fontSize: 20,
+    fontSize: 10,
 
     textAlign: "center",
     textAlignVertical: "center",

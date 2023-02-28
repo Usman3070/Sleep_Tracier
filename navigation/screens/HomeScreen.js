@@ -6,6 +6,9 @@ import FactorSound from "../../components/FactorSound";
 import TopNav from "../../components/TopNav";
 import ClockFace from "../../components/ClockFace";
 
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 export default function HomeScreen({ navigation }) {
   return (
     <View>
@@ -30,10 +33,14 @@ export default function HomeScreen({ navigation }) {
 
           <Days />
           <FactorSound />
-          <Btn
-            source={require("../../assets/icons/Playstore.png")}
-            title="Start Sleep"
-          />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Navigation_3D")}
+          >
+            <Btn
+              source={require("../../assets/icons/Playstore.png")}
+              title="3D Screens"
+            />
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>

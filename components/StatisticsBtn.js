@@ -1,7 +1,10 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
 const StatisticsBtn = () => {
+  const handlePress = () => {
+    Alert.alert("Hellow", "and also Hello");
+  };
   return (
     <View>
       <View
@@ -10,10 +13,11 @@ const StatisticsBtn = () => {
           flexDirection: "row",
           marginTop: "25%",
           justifyContent: "center",
+          marginBottom: 20,
         }}
       >
         <View>
-          <TouchableOpacity style={styles.btnLeft}>
+          <TouchableOpacity style={styles.btnLeft} onPress={handlePress}>
             <Text style={styles.textLeft}>Journal</Text>
           </TouchableOpacity>
         </View>

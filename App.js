@@ -1,9 +1,16 @@
-import * as React from 'react';
-import MainContainer from './navigation/MainContainer';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigation from "./navigation/MainNavigation";
+
+import ContextStore from "./context/ContextStore";
 
 function App() {
   return (
-    <MainContainer/>
+    <ContextStore>
+      <NavigationContainer>
+        <MainNavigation />
+      </NavigationContainer>
+    </ContextStore>
   );
 }
 

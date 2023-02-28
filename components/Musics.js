@@ -2,12 +2,14 @@ import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const Musics = ({ image, title, subTitle, icon1, icon2 }) => {
+  console.log("image", image);
+
   return (
     <ImageBackground
       source={image}
       style={{ width: 160, height: 190, marginRight: 10, position: "relative" }}
       imageStyle={{ borderRadius: 10 }}
-      resizeMode='contain'
+      resizeMode="contain"
     >
       <View
         style={{

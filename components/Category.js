@@ -1,17 +1,27 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
-const Category = () => {
+const Category = ({ setSongCategory }) => {
   return (
     <View style={styles.container}>
       <View
         style={{
           flex: 1,
           alignItems: "center",
+
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/All.png")} />
+        <MaterialIcons
+          name="border-all"
+          size={24}
+          color="white"
+          onPress={() => setSongCategory(null)}
+        />
         <Text style={styles.text}>All</Text>
       </View>
       <View
@@ -21,7 +31,12 @@ const Category = () => {
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/Rain.png")} />
+        <Ionicons
+          name="ios-rainy-outline"
+          size={24}
+          color="white"
+          onPress={() => setSongCategory("rain")}
+        />
         <Text style={styles.text}>Rain</Text>
       </View>
       <View
@@ -31,7 +46,12 @@ const Category = () => {
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/Nature.png")} />
+        <MaterialCommunityIcons
+          name="leaf-maple"
+          size={24}
+          color="white"
+          onPress={() => setSongCategory("nature")}
+        />
         <Text style={styles.text}>Nature</Text>
       </View>
       <View
@@ -41,7 +61,12 @@ const Category = () => {
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/Heart.png")} />
+        <MaterialCommunityIcons
+          name="heart-multiple-outline"
+          size={24}
+          color="white"
+          onPress={() => setSongCategory("life")}
+        />
         <Text style={styles.text}>Life</Text>
       </View>
       <View
@@ -51,7 +76,7 @@ const Category = () => {
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/Mic.png")} />
+        <Feather name="mic" size={20} color="white" />
         <Text style={styles.text}>ASMR</Text>
       </View>
       <View
@@ -61,8 +86,8 @@ const Category = () => {
           justifyContent: "center",
         }}
       >
-        <Image source={require("../assets/icons/yoga.png")} />
-        <Text style={styles.text}>Meditation</Text>
+        <MaterialCommunityIcons name="meditation" size={24} color="white" />
+        <Text style={styles.text}>Meditatio</Text>
       </View>
     </View>
   );

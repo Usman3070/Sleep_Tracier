@@ -3,10 +3,10 @@ import React from "react";
 
 const Btn = (props) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <View style={styles.container}>
       <Image source={props.source} style={{ marginRight: 8, marginLeft: -8 }} />
       <Text style={styles.btnText}>{props.title}</Text>
-    </TouchableOpacity>
+    </View>
   );
 };
 
